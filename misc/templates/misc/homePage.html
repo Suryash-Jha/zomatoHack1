@@ -1,6 +1,6 @@
 {% extends 'misc/base.html'%}
+{% load static %}
 {% block content %}
-
 <html lang="en">
     <head>
       <meta charset="UTF-8" />
@@ -127,7 +127,7 @@
         rgba(240, 240, 240, 0.144),
         rgba(255, 255, 255, 0.336)
       ),
-      url("coverup (3).png");
+      url("{% static 'img/coverup (3).png' %}");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -496,7 +496,7 @@
             </p>
           </div>
           <div class="about-img">
-            <img src="a1.png" alt="food" />
+            <img src="{% static 'img/a1.png' %}" />
           </div>
         </div>
       </section>
@@ -505,7 +505,7 @@
       <section id="about">
         <div class="about-wrapper container">
           <div class="about-img">
-            <img src="a2.png" alt="food" />
+            <img src="{% static 'img/a2.png' %}" alt="food" />
           </div>
           <div class="about-text">
             <p class="small">About Us</p>
@@ -537,7 +537,7 @@
             </p>
           </div>
           <div class="about-img">
-            <img src="a3.png" alt="food" />
+            <img src="{% static 'img/a3.png' %}" alt="food" />
           </div>
         </div>
       </section>
@@ -545,7 +545,7 @@
       <section id="contact">
         <div class="contact-container container">
           <div class="contact-img">
-            <img src="contact.png" alt="" />
+            <img src="{% static 'img/contact.png' %}" alt="" />
           </div>
   
           <div class="form-container">
