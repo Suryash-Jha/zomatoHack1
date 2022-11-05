@@ -6,16 +6,19 @@ def home(request):
     return render(request, 'misc/homePage.html')
 
 def courses(request):       
-    return render(request, 'courses.html')
+    return render(request, 'misc/courses.html')
 
 def feed(request):
-    return render(request, 'feed.html')
+    return render(request, 'misc/feed.html')
 
 def leaderacad(request):
-    return render(request, 'leaderboardAcademics.html')
+    return render(request, 'misc/leaderboardAcademics.html')
 
 def leadercocurr(request):
-    return render(request, 'leaderboardCocurricular.html')
+    return render(request, 'misc/leaderboardCocurricular.html')
+
+def contactUs(request): 
+    return render(request, 'misc/contactUs.html')
 
 
 
