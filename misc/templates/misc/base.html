@@ -1,6 +1,4 @@
-{% extends 'misc/base.html'%}
-{% load static %}
-{% block content %}
+
 <html lang="en">
     <head>
       <meta charset="UTF-8" />
@@ -119,179 +117,6 @@
     margin-bottom: 0.5rem;
   }
   
-  /* ............//// Showcase styling ////......... */
-  
-  .showcase-area {
-    height: 60vh;
-    background: linear-gradient(
-        rgba(240, 240, 240, 0.144),
-        rgba(255, 255, 255, 0.336)
-      ),
-      url("{% static 'img/coverup (3).png' %}");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .showcase-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    font-size: 1.6rem;
-  }
-  
-  .main-title {
-    text-transform: uppercase;
-    margin-top: 1.5em;
-  }
-  
-  /* ......//about us//...... */
-  
-  #about {
-    padding: 50px 0;
-    
-    background: #f5f5f7;
-  }
-  
-  .about-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  #about h2 {
-    font-size: 2.3rem;
-  }
-  
-  #about p {
-    font-size: 1.2rem;
-    color: #555;
-  }
-  
-  #about .small {
-    font-size: 1.2rem;
-    color: #666;
-    font-weight: 600;
-  }
-  
-  .about-img {
-    flex: 1 1 400px;
-    padding: 30px;
-    transform: translateX(150%);
-    animation: about-img-animation 1s ease-in-out forwards;
-  }
-  
-  @keyframes about-img-animation {
-    100% {
-      transform: translate(0);
-    }
-  }
-  
-  .about-text {
-    flex: 1 1 400px;
-    padding: 30px;
-    margin: auto;
-    transform: translate(-150%);
-    animation: about-text-animation 1s ease-in-out forwards;
-  }
-  
-  @keyframes about-text-animation {
-    100% {
-      transform: translate(0);
-    }
-  }
-  
-  .about-img img {
-    display: block;
-    height: 400px;
-    max-width: 100%;
-    margin: auto;
-    object-fit: cover;
-    object-position: right;
-  }
-  /* .change{
-    flex: auto;
-  } */
-  
-  
-  
-  /* ........ Contact Us........... */
-  
-  #contact {
-    padding: 5rem 0;
-    background: white;
-  }
-  
-  .contact-container {
-    display: flex;
-    background: #fff;
-  }
-  
-  .contact-img {
-    width: 50%;
-  }
-  
-  .contact-img img {
-    margin: 40px;
-    display: flex;
-    height: 300px;
-    width: 50%;
-    object-position: center;
-    object-fit: cover;
-    justify-content: center;
-  }
-  
-  .form-container {
-    padding: 1rem;
-    width: 50%;
-    margin: auto;
-  }
-  
-  .form-container input {
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    padding: 1rem 0;
-    box-shadow: none;
-    outline: none;
-    margin-bottom: 1rem;
-    color: #444;
-    font-weight: 500;
-  }
-  
-  .form-container textarea {
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    color: #444;
-    outline: none;
-    padding: 1rem 0;
-    resize: none;
-  }
-  
-  .form-container h2 {
-    font-size: 2.7rem;
-    font-weight: 500;
-    color: #444;
-    margin-bottom: 1rem;
-    margin-top: -1.2rem;
-  }
-  
-  .form-container a {
-    font-size: 1.3rem;
-  }
-  
-  #footer h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    padding: 2.6rem;
-    font-weight: 500;
-    color: #fff;
-    background: rgb(65, 65, 65);
-  }
   
   /* ......../ media query /.......... */
   
@@ -470,102 +295,26 @@
       </style>
     </head>
     <body>
-      <section class="showcase-area" id="showcase">
-        <div class="showcase-container">
+      <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#food">Category</a></li>
+                <li><a href="#food-menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <h1 class="logo">Linkify</h1>
         </div>
-      </section>
-  
-      <!-- button change update -->
-      <!-- <div class="change">
-        <a href="#food-menu" class="btn btn-primary">Book Your First Service</a>
-      </div>
-       -->
-  
-  
-      <section id="about">
-        <div class="about-wrapper container">
-          <div class="about-text">
-            <p class="small">About Us</p>
-            <h2>India's No 1 Unicorn.</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ab
-              eos omnis, nobis dignissimos perferendis et officia architecto,
-              fugiat possimus eaque qui ullam excepturi suscipit aliquid optio,
-              maiores praesentium soluta alias asperiores saepe commodi
-              consequatur? Perferendis est placeat facere aspernatur!
-            </p>
-          </div>
-          <div class="about-img">
-            <img src="{% static 'img/a1.png' %}" />
-          </div>
-        </div>
-      </section>
-  
-  
-      <section id="about">
-        <div class="about-wrapper container">
-          <div class="about-img">
-            <img src="{% static 'img/a2.png' %}" alt="food" />
-          </div>
-          <div class="about-text">
-            <p class="small">About Us</p>
-            <h2>India's No 1 Unicorn.</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ab
-              eos omnis, nobis dignissimos perferendis et officia architecto,
-              fugiat possimus eaque qui ullam excepturi suscipit aliquid optio,
-              maiores praesentium soluta alias asperiores saepe commodi
-              consequatur? Perferendis est placeat facere aspernatur!
-            </p>
-          </div>
-         
-        </div>
-      </section>
-  
-  
-      <section id="about">
-        <div class="about-wrapper container">
-          <div class="about-text">
-            <p class="small">About Us</p>
-            <h2>India's No 1 Unicorn.</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ab
-              eos omnis, nobis dignissimos perferendis et officia architecto,
-              fugiat possimus eaque qui ullam excepturi suscipit aliquid optio,
-              maiores praesentium soluta alias asperiores saepe commodi
-              consequatur? Perferendis est placeat facere aspernatur!
-            </p>
-          </div>
-          <div class="about-img">
-            <img src="{% static 'img/a3.png' %}" alt="food" />
-          </div>
-        </div>
-      </section>
-      
-      <section id="contact">
-        <div class="contact-container container">
-          <div class="contact-img">
-            <img src="{% static 'img/contact.png' %}" alt="" />
-          </div>
-  
-          <div class="form-container">
-            <h2>Contact Us</h2>
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="E-Mail" />
-            <textarea
-              cols="30"
-              rows="6"
-              placeholder="Type your Feedback"
-            ></textarea>
-            <a href="#" class="btn btn-primary">Submit</a>
-          </div>
-        </div>
-      </section>
-      <footer id="footer">
-        <h2>Linkify &copy; all rights reserved 2022 </h2>
-        <!-- © Vishal -->
-        
-      </footer>
+    </nav>
+     {% block content %}
+     {% endblock %}
     </body>
     <!-- 
       .................../ JS Code for smooth scrolling /...................... -->
@@ -600,4 +349,3 @@
       });
     </script>
   </html>
-  {% endblock %}
