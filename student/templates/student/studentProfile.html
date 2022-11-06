@@ -51,23 +51,16 @@
     padding: 5px 10px;
     color: #000;
 }
-.pureh{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 </style>
 </head>
 <body>
-
-    <div class="pureh">
     <div class="student-profile py-4">
         <div class="container">
           <div class="row">
             <div class="col-lg-4">
               <div class="card shadow-sm">
                 <div class="card-header bg-transparent text-center">
-                  <img class="profile_img" src="Profile.png" alt="student dp">
+                  <img class="profile_img" src="{% static 'img/Profile.png' %}" alt="student dp">
                   <h3>Vishal</h3>
                 </div>
                 <div class="card-body">
@@ -125,7 +118,5 @@
           </div>
         </div>
       </div>
-    </div>
-      </body>
 </body>
 </html>
