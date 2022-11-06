@@ -1,3 +1,5 @@
+{% extends 'teacher/base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -316,7 +318,7 @@ body {
                   <input id="login-password" type="password" required>
                 </div>
               </fieldset>
-              <button type="submit" class="btn-login">Login</button>
+              <button type="submit" class="btn-login"><a href="/">Login</a>></button>
             </form>
           </div>
           <div class="form-wrapper">
@@ -359,3 +361,4 @@ switchers.forEach(item => {
       </script>
 </body>
 </html>
+{% endblock %}
